@@ -1,11 +1,27 @@
 version: 0.1
 
+
 phases:
+  install:
+    commands:
+      - echo nothing to install...
+    finally:
+      - echo This always runs even if the update or install command fails
+  pre_build:
+    commands:
+      - echo no pre_build commands...
+    finally:
+      - echo This always runs even if the login command fails
   build:
     commands:
-      -echo nothing to build yer
-  artifacts:
-    files:
+      - echo nothing to build yet...
+    finally:
+      - echo This always runs even if the install command fails
+  post_build:
+    commands:
+      - echo no post build activity
+artifacts:
+  files:
       - index.html
       - favicon.ico
       - styles/*
