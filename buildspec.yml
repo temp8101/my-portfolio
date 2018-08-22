@@ -15,7 +15,7 @@ phases:
   build:
     commands:
       - npm install
-      - npm run webpack
+      - npm run build
       - echo nothing to build yet...
     finally:
       - echo This always runs even if the install command fails
