@@ -14,6 +14,8 @@ phases:
       - echo This always runs even if the login command fails
   build:
     commands:
+      - npm install
+      - npm run webpack
       - echo nothing to build yet...
     finally:
       - echo This always runs even if the install command fails
@@ -26,3 +28,4 @@ artifacts:
       - favicon.ico
       - styles/*
       - images/*
+      - dist/bundle.js
